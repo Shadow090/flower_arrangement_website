@@ -1,0 +1,78 @@
+:root {
+    --primary: #8a9a5b; /* Sage Green */
+    --accent: #d4a373;  /* Soft Sand */
+    --text: #333;
+    --light: #fefae0;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+header {
+    background: white;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav, .service-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { text-decoration: none; color: var(--text); font-weight: bold; }
+
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=1500') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 2rem 5%;
+}
+
+.product-card {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover { transform: translateY(-5px); }
+
+.cta {
+    background: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.alt-bg { background: var(--light); padding: 4rem 5%; text-align: center; }
+
+/* Modal Logic */
+.hidden { display: none; }
+#cart-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center;
+}
+.modal-content { background: white; padding: 30px; border-radius: 8px; width: 300px; }

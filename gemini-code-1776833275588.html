@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petals & Prose | Floral Design</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Petals & Prose</div>
+            <ul>
+                <li><a href="#arrangements">Arrangements</a></li>
+                <li><a href="#staging">Staging</a></li>
+                <li><a href="#supplies">Supplies</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><button id="cart-btn">Cart (0)</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Artisan Floral Arrangements</h1>
+        <p>Bringing nature's elegance to your most cherished moments.</p>
+        <a href="#arrangements" class="cta">Shop the Collection</a>
+    </section>
+
+    <main>
+        <section id="arrangements">
+            <h2>Signature Bouquets & Vases</h2>
+            <div class="grid" id="product-list">
+                </div>
+        </section>
+
+        <section id="staging" class="alt-bg">
+            <h2>Event Staging</h2>
+            <p>Full-service floral design for Weddings and Birthdays. We transform venues into botanical wonders.</p>
+            <div class="service-flex">
+                <div class="card"><h3>Weddings</h3><p>Consultation to Installation.</p></div>
+                <div class="card"><h3>Birthdays</h3><p>Custom themes and centerpieces.</p></div>
+            </div>
+        </section>
+
+        <section id="supplies">
+            <h2>Tools & Essentials</h2>
+            <div class="grid" id="supply-list"></div>
+        </section>
+
+        <section id="classes" class="alt-bg">
+            <h2>Flower Arrangement Classes</h2>
+            <p>Join our master florists for a weekend workshop. Materials included.</p>
+            <button class="cta">Book a Class</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Petals & Prose Floral Co. | Hosted on GitHub</p>
+    </footer>
+
+    <div id="cart-modal" class="hidden">
+        <div class="modal-content">
+            <h3>Your Bouquet</h3>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0</span></p>
+            <button onclick="closeCart()">Close</button>
+            <button class="cta">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>
