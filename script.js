@@ -108,31 +108,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const openCartBtn = document.getElementById('cart-btn');
     const closeCartBtn = document.getElementById('close-cart-btn');
     const checkoutBtn = document.getElementById('checkout-btn');
+    
+    // New variables for the Success Popup
+    const successModal = document.getElementById('success-modal');
+    const closeSuccessBtn = document.getElementById('close-success-btn');
 
-    // Open Modal
+    // Open Cart Modal
     openCartBtn.addEventListener('click', () => {
         cartModal.classList.remove('hidden');
     });
 
-    // Close Modal
+    // Close Cart Modal
     closeCartBtn.addEventListener('click', () => {
         cartModal.classList.add('hidden');
     });
 
-    // Checkout Process
+    // Checkout Process (Triggers the new popup)
     checkoutBtn.addEventListener('click', () => {
         if (cart.length === 0) {
             alert("Your cart is empty! Add some items before checking out.");
             return;
         }
         
-        // Simulate a successful purchase
-        alert("Thank you for your purchase! Your order has been placed.");
-        
-        // Clear the cart and update the UI
+        // 1. Empty the cart and update the numbers
         cart = [];
         updateCartUI();
+        
+        // 2. Hide the Cart Modal
         cartModal.classList.add('hidden');
+        
+        // 3. Show the Success Popup
+        successModal.classList.remove('hidden');
+    });
+
+    // Close Success Popup
+    closeSuccessBtn.addEventListener('click', () => {
+        successModal.classList.add('hidden');
     });
 
     // Initialize the page on load
