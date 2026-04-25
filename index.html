@@ -16,7 +16,7 @@
                 <li><a href="#staging">Staging</a></li>
                 <li><a href="#supplies">Supplies</a></li>
                 <li><a href="#classes">Classes</a></li>
-                <li><button id="cart-btn">Cart (0)</button></li>
+                <li><button id="cart-btn" class="cta">Cart (0)</button></li>
             </ul>
         </nav>
     </header>
@@ -30,16 +30,23 @@
     <main>
         <section id="arrangements">
             <h2>Signature Bouquets & Vases</h2>
-            <div class="grid" id="product-list">
-                </div>
+            <div class="grid" id="product-list"></div>
         </section>
 
         <section id="staging" class="alt-bg">
             <h2>Event Staging</h2>
             <p>Full-service floral design for Weddings and Birthdays. We transform venues into botanical wonders.</p>
             <div class="service-flex">
-                <div class="card"><h3>Weddings</h3><p>Consultation to Installation.</p></div>
-                <div class="card"><h3>Birthdays</h3><p>Custom themes and centerpieces.</p></div>
+                <div class="card">
+                    <h3>Weddings</h3>
+                    <p>Consultation to Installation.</p>
+                    <button class="cta contact-btn">Request Consultation</button>
+                </div>
+                <div class="card">
+                    <h3>Birthdays</h3>
+                    <p>Custom themes and centerpieces.</p>
+                    <button class="cta contact-btn">Request Consultation</button>
+                </div>
             </div>
         </section>
 
@@ -51,7 +58,7 @@
         <section id="classes" class="alt-bg">
             <h2>Flower Arrangement Classes</h2>
             <p>Join our master florists for a weekend workshop. Materials included.</p>
-            <button class="cta">Book a Class</button>
+            <button class="cta" id="book-class-btn">Book a Class ($99)</button>
         </section>
     </main>
 
@@ -61,11 +68,15 @@
 
     <div id="cart-modal" class="hidden">
         <div class="modal-content">
-            <h3>Your Bouquet</h3>
-            <ul id="cart-items"></ul>
-            <p>Total: $<span id="total-price">0</span></p>
-            <button onclick="closeCart()">Close</button>
-            <button class="cta">Checkout</button>
+            <h3>Your Cart</h3>
+            <ul id="cart-items">
+                </ul>
+            <hr>
+            <p><strong>Total: $<span id="total-price">0.00</span></strong></p>
+            <div class="modal-actions">
+                <button id="close-cart-btn">Close</button>
+                <button id="checkout-btn" class="cta">Checkout</button>
+            </div>
         </div>
     </div>
 </body>
